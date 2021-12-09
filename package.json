@@ -3,10 +3,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pastoapp/astroid-keys.git"
-  },
+  "repository": "git://github.com/pastoapp/astroid-keys",
   "files": [
     "dist",
     "src"
