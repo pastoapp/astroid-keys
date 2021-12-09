@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.12",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -35,7 +35,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "astroid-keys",
+  "name": "@pastoapp/astroid-keys",
   "author": "Valerius Mattfeld",
   "module": "dist/astroid-keys.esm.js",
   "size-limit": [
