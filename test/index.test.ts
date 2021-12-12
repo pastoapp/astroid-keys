@@ -1,4 +1,6 @@
 import {
+  decryptMessage,
+  encryptMessage,
   generateKeyPair,
   generateKeyPairFromMnemonic,
   signMessage,
@@ -77,5 +79,20 @@ describe('testing human crypto keys', () => {
         keyPair.publicKey
       )
     ).toEqual(true);
+  });
+});
+
+describe('testing crypto keys', () => {
+  it('test if a given message can be encrypted', async () => {
+    const encrypted = await encryptMessage(msg, keyPair.publicKey);
+
+    expect(encrypted).toBeDefined();
+  });
+
+  it('test if a given encrypted message can be decrypted', async () => {
+    const encrypted = await encryptMessage(msg, keyPair.publicKey);
+    const decrypted = await decryptMessage(encrypted, keyPair.privateKey);
+
+    expect(decrypted).toEqual(msg);
   });
 });

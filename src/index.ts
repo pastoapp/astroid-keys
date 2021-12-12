@@ -3,7 +3,12 @@ import {
   getKeyPairFromMnemonic as gMemPair,
 } from 'human-crypto-keys';
 import { IHumanCryptoKey } from './interfaces/IHumanCryptoKey.interface';
-import { createSign, createVerify } from 'crypto';
+import {
+  createSign,
+  createVerify,
+  publicEncrypt,
+  privateDecrypt,
+} from 'crypto';
 
 export const ALGORITHM = 'rsa';
 
@@ -43,4 +48,18 @@ export const verifyMessage = async (
   const verifier = createVerify('RSA-SHA256');
   verifier.update(message);
   return verifier.verify(publicKey, signature, 'base64');
+};
+
+export const encryptMessage = async (message: string, publicKey: string) => {
+  const encrypted = publicEncrypt(publicKey, Buffer.from(message));
+  return encrypted.toString('base64');
+};
+
+export const decryptMessage = async (
+  encryptMessage: string,
+  privateKey: string
+) => {
+  const decrypted = Buffer.from(encryptMessage, 'base64');
+  const decryptedMessage = privateDecrypt(privateKey, decrypted);
+  return decryptedMessage.toString();
 };
