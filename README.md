@@ -7,6 +7,13 @@ which has been lastly updated in may 2019.
 
 Therefore, it is not audited by any professional security standards, but carefully crafted to leave no room for errors.
 
+## Install
+Currently, is is not on the npmjs registry.
+
+```
+yarn install https://github.com/pastoapp/astroid-keys
+```
+
 ## License
 
 This project has been released unter the MIT license.
