@@ -7,6 +7,8 @@ import {
   verifyMessage,
 } from '../src/index';
 
+// NOTE: It shoud go without saying that those keys should not be used under any circumstances.
+
 const msg = 'LbxncRPa9f+4OzjWX1yKXQ==';
 
 const mnemonic =
