@@ -55,5 +55,6 @@
   },
   "dependencies": {
     "human-crypto-keys": "^0.1.4"
-  }
+  },
+  "private": false
 }
